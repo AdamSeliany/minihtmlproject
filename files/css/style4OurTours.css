@@ -1,0 +1,45 @@
+:root{
+    --premierColor: aqua;
+    --secColor:rgb(84, 90, 85);
+    --bgColor:black;
+    /* ترك 8 بالمئة من الهامش */
+    --padding : 8%;
+}
+@font-face {
+    font-family: adam;
+    src: url(/files/fonts/Comfortaa-VariableFont_wght.ttf);
+    font-family: cool;
+    src: url(/files/fonts/Redslit.otf);
+    font-family: seliani;
+    src: url(/files/fonts/SingleFlashing.otf);
+}
+/*الخصائص المشتركة*/
+*{
+    /* حذف الهوامش و الفراغات*/
+    margin: 0;
+    padding: 0;
+    /**/
+    box-sizing: border-box;
+}
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: adam;
+    background: #181818;
+    height: 100vh;
+    overflow: hidden;
+  }
+  h1{
+    font-size: 2rem;
+    color: aliceblue;
+  }
+  marquee{
+    pointer-events: painted;
+  }

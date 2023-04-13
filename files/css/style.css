@@ -1,0 +1,231 @@
+/* تعريف كل المتغيرات لتسهيل الكتابة*/
+:root{
+    --premierColor: aqua;
+    --secColor:rgb(49, 95, 55);
+    --bgColor:black;
+    /* ترك 8 بالمئة من الهامش */
+    --padding : 8%;
+}
+@font-face {
+    font-family: adam;
+    src: url(/files/fonts/Comfortaa-VariableFont_wght.ttf);
+    font-family: cool;
+    src: url(/files/fonts/Redslit.otf);
+    font-family: seliani;
+    src: url(/files/fonts/SingleFlashing.otf);
+    font-family: bold404;
+    src: url(/files/fonts/Comfortaa-Bold.ttf);
+}
+/*الخصائص المشتركة*/
+*{
+    /* حذف الهوامش و الفراغات*/
+    margin: 0;
+    padding: 0;
+    /**/
+    box-sizing: border-box;
+}
+html{
+    /*تطبيق الخط على كل الصفحات*/
+    font-family: 'adam',sans-serif;
+    font-size: 16px;
+    color: aliceblue;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    /*vl = view port*/
+    background-color: var(--bgColor);
+    display: flex;
+    /*تظهر العناصر على شكل column*/
+    flex-direction: column;
+}
+span{
+    color: var(--secColor);
+}
+h2{
+    font-size: 2.2rem;
+    /*فراغات بين الكلمة*/
+    letter-spacing: 0.12rem;
+    /*تغيير شكل مأشر الفأرة*/
+    cursor: pointer;
+}
+nav{
+    
+    /*تغيير الهوامش*/
+    padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    /*للقائمة*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    /*حذف الرموز*/
+    list-style-type: none;
+    /*إظهار كل العناصر في سطر واحد*/
+    display: inline-block;
+    /*تحديد الفراغات بين العناصر */
+    margin: 0.8rem 1.5rem;
+}
+nav ul li a{
+    color: white;
+    /*حذف الخط تحت العناوين*/
+    text-decoration: none;
+    /*جعل الأحرف الأولى لكل العناوين كبيرة*/
+    text-transform: capitalize;
+    /*إضافة Animation عند تحريك المؤشر نحو العنوان*/
+    transition: 0.4s;
+}
+/*عند تمرير المؤشر على العناوين تتغير حالاتها حسب التالي*/
+nav ul li a:hover{
+    color: var(--secColor);
+}
+/*تسجيل الدخول*/
+.btn{
+    
+    background-color: var(--secColor);
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border: 2px solid transparent;
+    /*تنعيم الحواف*/
+    border-radius: 30px;
+    transition: 0.4s;
+}
+/*عند تمرير المؤشر على كلمة تسجيل الدخول تتغير حالاتها حسب التالي*/
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--secColor);
+}
+.content{
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    /*العنوان الكبير */
+    align-items: center;
+    justify-content: space-between;
+}
+.container-texts{
+    position: relative;
+    /*رفع العنوان الكبير */
+    bottom: 70px;
+    color: bisque;
+    font-family: cool;
+}
+h1{
+    font-size: 4.65rem;
+    margin: 1.7rem 0;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+}
+.socialMedia{
+    margin-top: 3.5rem;
+}
+.socialMedia img{
+    margin-right: 2rem;
+    width: 2.5rem;   
+    transition: 0.4s;
+}
+.socialMedia img:hover{
+    /*تكبير اللوفوات عند وضع المؤشر عليه*/
+    transform: scale(1.2);
+}
+.home .containenrImages{
+    width: 45%;
+    height: 90%;
+    position: relative;
+    align-self: flex-end;
+}
+.home .containenrImages img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition:bottom 1s,left 1s;
+}
+.home .containenrImages:hover .shape{
+    bottom:40px;
+}
+.home .containenrImages:hover .pic{
+    left: 45%;
+}
+.aboutus{
+    background-color:dimgrey;
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+.aboutus .containenrImages{
+    width: 35%;
+}
+.aboutus .containenrImages img{
+    width: 90%;
+}
+.aboutus .container-texts{
+    width: 35%;
+}
+p{
+    font-family: 'bold404' ,sans-serif;
+    color:rgb(238, 208, 198);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+/*h5{
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}*/
+.hotel{
+    background-color:var(--bgColor);
+    padding: 2rem var(--padding);
+}
+.text-center {
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    text-align: center;
+    width: 300px;
+    background-color:peru;
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    font-family: cool;
+}
+.ourtours{
+    background-color: var(--bgColor);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ourtours .containenrImages{
+    width: 35%;
+}
+.ourtours .containenrImages img{
+    width: 90%;
+}
+footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2rem var(--bgColor);
+    background-color:rgb(255, 255, 255);
+}
+footer .content-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
